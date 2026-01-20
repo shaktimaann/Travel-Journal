@@ -29,3 +29,49 @@ header > h1{
   font-size: 1rem;
   letter-spacing: -10%;
 }
+
+.card-subheading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: -150px;
+  margin-left: 60px;
+  
+}
+
+
+.card-1{
+  align-items: center;
+}
+
+.main-image-container{
+  width: 150px;
+  height: 168px;
+  overflow: hidden;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-top: 50px;
+
+}
+
+.main-image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+
+}
+
+.main-container{
+  margin-left: 100px;
+  margin-right: 100px;
+
+}
+
+.main-content{
+  margin-left: 200px;
+  margin-top: -20px;
+}
+
+
