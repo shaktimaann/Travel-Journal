@@ -1,24 +1,28 @@
-export default function Cards(){
-    return(
-        <article className="main-container">
-            <div className="main-image-container">
-                <img src="/imgs/mount-fuji.png"  className="main-image"></img>
-            </div>
-            <div className="card-subheading">
-
-        <img src="/imgs/marker.png"></img>
-        <h3>JAPAN</h3>
-        <a>View on Google Maps</a>
+import marker from "../images/marker.png";
+export default function Entry(props) {
+  return (
+    <>
+      <article className="journal-entry">
+        <div className="main-image-container">
+          <img
+            className="main-image"
+            src={props.entry.img.src}
+            alt={props.entry.img.alt}
+          />
         </div>
-        <div className="main-content">
-
-        <h1>Mount Fuji</h1>
-        <h3>12 Jan, 2023 - 24 Jan, 2023</h3>
-        <p>Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.</p>
+        <div className="info-container">
+          <img className="marker" src={marker} alt="map marker icon" />
+          <span className="country">{props.entry.country}</span>
+          <a href={props.entry.mapsLink}>
+            View on Google Maps
+          </a>
+          <h2 className="entry-title">{props.entry.title}</h2>
+          <p className="trip-dates">{props.entry.dates}</p>
+          <p className="entry-text">
+            {props.entry.text}
+          </p>
         </div>
-
-
-        </article>
-    )
+      </article>
+    </>
+  );
 }
-
